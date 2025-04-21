@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>InnovaWeb - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+   
+<!-- Navbar -->
+<nav class="navbar navbar-expand-md navbar-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="{{ url_for('static', filename='Imagenes/Logo.png') }}" alt="Logo">
+        </a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#Sobremi">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonios">Testimonios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contáctame</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{{ url_for('logout') }}">Cerrar sesión</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero aling-items-stretch">
+    <div class="hero-principal dflex flex-column justify-content-between align-items-center">
+        <img class="hero-imagen-desarrollador rounded-circle" src="{{ url_for('static', filename='Imagenes/GrupoPortada.jpg') }}" alt="Imagen personal">
+        <h1>Hola, {{ usuario }}</h1>
+        <h2>Bienvenido a InnovaWeb – Tu plataforma de innovación digital</h2>
+    </div>
+    <div class="hero-inferior">
+        <img class="hero-inferior-imagen img-fluid" src="{{ url_for('static', filename='Imagenes/LOGO2.png') }}" alt="Imagen inferior">
+    </div>
+</section>
+
+
+<!-- ------ Sobre Mi --------- -->
+
+<section id= "Sobremi" class="sobre-mi seccion-oscura">
+    <div class="contenedor">
+        <h2 class="seccion-titulo texto-blanco">Conoce a tu empresa de Desarrollo Web</h2>
+        <p class="seccion-texto"> Somos un grupo de desarrolladores web apasionados por convertir ideas en experiencias digitales atractivas y funcionales. Nos gusta trabajar con las últimas tecnologías y tendencias para asegurar que cada proyecto cuente con una base sólida en rendimiento, seguridad y usabilidad. Creemos en la importancia de la colaboración y la comunicación fluida para entender a fondo los objetivos de cada cliente, logrando así resultados que superen sus expectativas.</p>
+    </div>
+</section>
+
+<!-- -----Experiencia-------- -->
+<section class="experiencia seccion-clara">
+    <div class="container text-center">
+        <div class="row">
+            <div class="columna col-12 col-md-4">
+                <i class="bi bi-laptop"></i>
+                
+                <p class="experiencia-titulo">Desarrollo Web</p>
+                <p>Diseñamos y programamos sitios web responsivos, centrándonos en una experiencia de usuario fluida y amigable. Integramos las últimas tecnologías para asegurar rendimiento y escalabilidad, creando soluciones personalizadas que se ajusten a cada proyecto.</p>
+                <div class="badges-contenedor">
+                    <span class="badge text-bg-info">HTML</span>
+                    <span class="badge text-bg-info">CSS3</span>
+                    <span class="badge text-bg-info">JavaScript</span>
+                    <span class="badge text-bg-info">Bootstrap</span>
+                </div>
+            
+            </div>
+
+
+            <div class="columna col-12 col-md-4">
+                <i class="bi bi-laptop"></i>
+                
+                <p class="experiencia-titulo">Revisión de Artículos</p>
+                <p>Nos encargamos de corregir y pulir textos para publicaciones, blogs y documentación técnica. Verificamos la coherencia, ortografía y gramática, garantizando la claridad y el profesionalismo en cada contenido. Con especial atención al detalle, ofrecemos feedback constructivo para mejorar la calidad global de cualquier escrito.</p>
+                <div class="badges-contenedor">
+                    <span class="badge text-bg-info">HTML</span>
+                    <span class="badge text-bg-info">CSS3</span>
+                    <span class="badge text-bg-info">JavaScript</span>
+                    <span class="badge text-bg-info">Bootstrap</span>
+                </div>
+            
+            </div>
+
+
+            <div class="columna col-12 col-md-4">
+                <i class="bi bi-laptop"></i>
+                
+                <p class="experiencia-titulo">Estudios</p>
+                <p>Contamos con formación en desarrollo de software y metodologías ágiles para la gestión de proyectos. Estamos en constante aprendizaje, explorando nuevas herramientas y lenguajes de programación para mantenerme al día en un entorno tecnológico en rápida evolución.</p>
+                <div class="badges-contenedor">
+                    <span class="badge text-bg-info">HTML</span>
+                    <span class="badge text-bg-info">CSS3</span>
+                    <span class="badge text-bg-info">JavaScript</span>
+                    <span class="badge text-bg-info">Bootstrap</span>
+                </div>
+            
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+<!-- Seccion de mis proyectos -->
+<section id="proyectos" class="proyectos-recientes seccion-clara dflex flex-column">
+    <h2 class="seccion-titulo texto-negro">Nuestros últimos proyectos</h2>
+    <h3 class="seccion-descripcion">Estos son algunos de nuestros proyectos...</h3>
+    <!-- *** Galería ***-->
+
+    <div class="container text-center proyectos-contenedor">
+        
+        <div class="row">
+
+            <!-- *** Proyecto 1-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto">
+                    <img src="{{ url_for('static', filename='Imagenes/proyectos.png') }}" alt="Imagen del proyecto 1">
+                    <div class="overlay">
+                        <p>Proyecto 1 Desarrollo en Azure</p>
+                        <div class="iconos-contenedor">
+                            <a href="https://github.com/IDSOCR" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            
+                            <a href="https://github.com/IDSOCR">
+                                <i class="bi bi-1-circle"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        
+            <!-- *** Proyecto 2-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto">
+                    <img src="{{ url_for('static', filename='Imagenes/proyectos.png') }}" alt="Imagen del proyecto 2">
+                    <div class="overlay">
+                        <p>Proyecto 2 Desarrollo en JavaScript</p>
+                        <div class="iconos-contenedor">
+                            <a href="https://github.com/IDSOCR" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            
+                            <a href="https://github.com/IDSOCR">
+                                <i class="bi bi-2-circle"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- *** Proyecto 3-->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="proyecto">
+                    <img src="{{ url_for('static', filename='Imagenes/proyectos.png') }}" alt="Imagen del proyecto 3">
+                    <div class="overlay">
+                        <p>Proyecto 3 Desarrollo en C#</p>
+                        <div class="iconos-contenedor">
+                            <a href="https://github.com/IDSOCR" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i>
+                            </a>
+                            
+                            <a href="https://github.com/IDSOCR">
+                                <i class="bi bi-3-circle"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+
+        </div>
+
+
+        
+ 
+    </div>
+
+    <!-- botonm para más proyectos -->
+<a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+    <button type="button" class="btn btn-info">
+        Ver más Proyectos
+        <i class="bi bi-arrow-right-square"></i>
+    </button>
+</a>
+
+</section>
+
+<!-- carrusel  -->
+
+<section id="testimonios" class="testimonios seccion-clara">
+    <h2 class="seccion-titulo">Testimonios de clientes</h2>
+    <h3 class="seccion-descripcion">Estos son los testimonios de algunos de nuestros clientes...</h3>
+
+    <!-- el carrusel  -->
+    <div id="testimonios-carrusel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+          <div class="carousel-item active">
+            <div class="container">
+                <img class="testimonio-imagen rounded-circle" src="{{ url_for('static', filename='Imagenes/TESTIMONIO1.jpg') }}" alt="Imagen de un chavalazo">
+                <p class="testimonio-texto">Trabajar con Ivar Solera fue una experiencia excepcional. Su atención al detalle y la rapidez de respuesta superaron todas nuestras expectativas. ¡Definitivamente lo recomendaré para futuros proyectos!</p>
+                    <div class="tesimonio-info">
+                        <p class="cliente">Persona Conocida 1</p>
+                        <p class="cargo">Gerente de Proyectos en Desarrollo Web</p>
+                    </div>
+            
+                </div>
+            
+            
+            </div>
+
+
+            <div class="carousel-item">
+                <div class="container">
+                    <img class="testimonio-imagen rounded-circle" src="{{ url_for('static', filename='Imagenes/TESTIMONIO2.jpg') }}" alt="Imagen de un chavalazo">
+                    <p class="testimonio-texto">“Me encantó el resultado final del sitio web. No solo se ve profesional, sino que también es muy fácil de navegar. Su dedicación y pasión por el desarrollo web se reflejan en la calidad del producto.”</p>
+                        <div class="tesimonio-info">
+                            <p class="cliente">Persona Conocida 2</p>
+                            <p class="cargo">Gerente Control de Calidad</p>
+                        </div>
+                
+                </div>
+                
+                
+            </div>
+
+            <div class="carousel-item">
+                <div class="container">
+                    <img class="testimonio-imagen rounded-circle" src="{{ url_for('static', filename='Imagenes/TESTIMONIO3.jpg') }}" alt="Imagen de un chavalazo">
+                    <p class="testimonio-texto">“Desde el primer contacto, Ivar Solera entendió perfectamente nuestras necesidades. Nos brindó soluciones creativas y un soporte continuo, lo cual hizo todo el proceso muy fluido y agradable.”</p>
+                        <div class="tesimonio-info">
+                            <p class="cliente">Persona Conocida 3</p>
+                            <p class="cargo">Gerente ANALITICA</p>
+                        </div>
+                
+                </div>
+                
+                
+            </div>
+
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonios-carrusel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+      
+</section>
+ 
+<!-- contacto  -->
+
+<section id="contacto" class="contacto seccion-oscura">
+
+    <div class="container">
+
+        <div class="rectangulo container text-center d-flex justify-content-evenly">
+
+            <div class="row">
+
+                <div class="col-12 col-md-4 seccion-titulo">
+                    !Hablemonos¡
+                </div>
+
+                <div class="col-12 col-md-4 descripcion">
+                    Contáctanos para hacer su idea de negocio en una web para sus clientes y su visión hecha realidad.
+                </div>
+
+                <div class="col-12 col-md-4">
+
+                    <a href="mailto:ibhar.solera@gmail.com">
+
+                        <button type="button">
+                            Contacto
+                            
+                            <i class="bi bi-envelope-check-fill"></i>
+
+                        </button>
+
+                    </a>
+
+                    
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!-- pie de página footer -->
+
+<footer class="seccion-oscura d-flex flex-column align-items-center justify-content-center">
+
+    
+    <img class="footer-logo" src="{{ url_for('static', filename='Imagenes/LOGO3.png') }}" alt="Logo del footer portafolio">
+    
+    <p class="footer-texto text-center">
+        Aprendemos y creamos todos los días. 
+        <br>
+        Creemos un proyecto junto... 
+    </p>
+    <div class="iconos-redes-sociales d-flex flex-wrap aling-items-center justify-content-center">
+
+         <a href="https://es.linkedin.com/" target="_blank" rel="noopener noreferrer">
+
+            <i class="bi bi-linkedin"></i>
+
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+
+            <i class="bi bi-instagram"></i>
+
+        </a>
+
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+
+            <i class="bi bi-facebook"></i>
+
+        </a>
+
+        <a href="https://wa.me/50688072057" target="_blank" rel="noopener noreferrer">
+
+            <i class="bi bi-whatsapp"></i>
+
+        </a>
+        
+
+    </div>
+
+    <div class="derechos_de_autor">
+
+        Creado por Ivar David Solera Quesada Proyecto de aprenidzaje. &#169;
+
+    </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
